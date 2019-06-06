@@ -7,6 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "XMPPNewSDK/XMPPUserManager.h"
+#import "XMPPNewSDK/XMPPConnectionManager.h"
+#import "XMPPNewSDK/ChatContact.h"
+#import "XMPPNewSDK/ChatMessages.h"
+#import "XMPPNewSDK/ChatMessageHistory.h"
+
 
 //! Project version number for XMPPNewSDK.
 FOUNDATION_EXPORT double XMPPNewSDKVersionNumber;

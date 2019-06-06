@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import XMPPFramework
 
 public class Service
 {
@@ -15,6 +16,11 @@ public class Service
     public static func FirstMethod() -> String
     {
         return "Project is working"
+    }
+    
+    public static func LoginAndAuthenticateWith(username: String, password: String)
+    {
+        XMPPConnectionManager.shared()?.authenticateUserWIthUSerName(username, withPassword: password)
     }
 }
 
