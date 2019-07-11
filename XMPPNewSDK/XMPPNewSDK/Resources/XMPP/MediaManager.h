@@ -1,8 +1,8 @@
 //
-//  MediaManagerObjC.h
-//  XMPPNewSDK
+//  MediaManager.h
+//  CustomXMPPSDK
 //
-//  Created by ashish on 7/10/19.
+//  Created by ashish on 7/11/19.
 //  Copyright © 2019 Capanicus. All rights reserved.
 //
 
@@ -10,9 +10,9 @@
 
 //NS_ASSUME_NONNULL_BEGIN
 
-@interface MediaManagerObjC : NSObject
+@interface MediaManager : NSObject
 
-+ (MediaManagerObjC *) sharedManager;
++ (MediaManager*) sharedManager;
 
 -(void) saveMediaWithMessageId:(NSString*)messageId MediaUrl:(NSString*)mediaUrl ThumbnailData:(NSString*)thumbnailData MediaType:(NSString*)mediaType;
 
@@ -26,8 +26,6 @@
 -(NSArray*) getMediaWithMessageId:(NSString*)messageId;
 
 -(void) deleteMediaDataWithMessageId:(NSString*)messageId;
-
-//-(void) getAllMedia;
 
 
 @end

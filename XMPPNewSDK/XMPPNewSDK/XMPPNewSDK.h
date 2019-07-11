@@ -12,6 +12,7 @@
 #import "XMPPNewSDK/ChatContact.h"
 #import "XMPPNewSDK/ChatMessages.h"
 #import "XMPPNewSDK/ChatMessageHistory.h"
+#import "XMPPNewSDK/MediaManager.h"
 
 
 //! Project version number for XMPPNewSDK.

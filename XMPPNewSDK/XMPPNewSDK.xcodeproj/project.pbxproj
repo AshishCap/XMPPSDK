@@ -25,7 +25,12 @@
 		75B3518122D4C63C00E9D05B /* XMPPNewSDK.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 75B3517F22D4C63C00E9D05B /* XMPPNewSDK.xcdatamodeld */; };
 		75B4FC8922CDE214004E0676 /* XMPPAppUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B4FC8822CDE214004E0676 /* XMPPAppUtility.swift */; };
 		75B4FC8C22CE319B004E0676 /* XMPPConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B4FC8B22CE319B004E0676 /* XMPPConstant.swift */; };
-		75B7815322D719B000EE705A /* MediaManagerObjC.h in Sources */ = {isa = PBXBuildFile; fileRef = 75B8E13D22D5B0B70075D047 /* MediaManagerObjC.h */; };
+		75B781A922D74C7800EE705A /* MediaManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 75B781A722D74C7800EE705A /* MediaManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		75B781AA22D74C7800EE705A /* MediaManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 75B781A822D74C7800EE705A /* MediaManager.m */; };
+		75B781AB22D74F6E00EE705A /* ChatUtility.swift in Headers */ = {isa = PBXBuildFile; fileRef = 75B3517B22D4C35F00E9D05B /* ChatUtility.swift */; settings = {ATTRIBUTES = (Public, ); }; };
+		75B781AC22D74F6E00EE705A /* XMPPChatSettingManager.swift in Headers */ = {isa = PBXBuildFile; fileRef = 7517C48222A003E400B06221 /* XMPPChatSettingManager.swift */; settings = {ATTRIBUTES = (Public, ); }; };
+		75B781AD22D74F6E00EE705A /* XMPPAppUtility.swift in Headers */ = {isa = PBXBuildFile; fileRef = 75B4FC8822CDE214004E0676 /* XMPPAppUtility.swift */; settings = {ATTRIBUTES = (Public, ); }; };
+		75B781AE22D74F6E00EE705A /* XMPPConstant.swift in Headers */ = {isa = PBXBuildFile; fileRef = 75B4FC8B22CE319B004E0676 /* XMPPConstant.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 		75B7967922A8EF5700D0A0F5 /* RNDecryptor.h in Headers */ = {isa = PBXBuildFile; fileRef = 75B7966F22A8EF5600D0A0F5 /* RNDecryptor.h */; };
 		75B7967A22A8EF5700D0A0F5 /* RNCryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 75B7967022A8EF5600D0A0F5 /* RNCryptor.m */; };
 		75B7967B22A8EF5700D0A0F5 /* RNCryptor+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 75B7967122A8EF5600D0A0F5 /* RNCryptor+Private.h */; };
@@ -36,8 +41,6 @@
 		75B7968022A8EF5700D0A0F5 /* RNDecryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 75B7967622A8EF5600D0A0F5 /* RNDecryptor.m */; };
 		75B7968122A8EF5700D0A0F5 /* RNEncryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 75B7967722A8EF5600D0A0F5 /* RNEncryptor.m */; };
 		75B7968222A8EF5700D0A0F5 /* RNCryptorEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 75B7967822A8EF5600D0A0F5 /* RNCryptorEngine.m */; };
-		75B8E13F22D5B0B70075D047 /* MediaManagerObjC.h in Headers */ = {isa = PBXBuildFile; fileRef = 75B8E13D22D5B0B70075D047 /* MediaManagerObjC.h */; };
-		75B8E14022D5B0B70075D047 /* MediaManagerObjC.m in Sources */ = {isa = PBXBuildFile; fileRef = 75B8E13E22D5B0B70075D047 /* MediaManagerObjC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +66,8 @@
 		75B3518022D4C63C00E9D05B /* XMPPNewSDK.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = XMPPNewSDK.xcdatamodel; sourceTree = "<group>"; };
 		75B4FC8822CDE214004E0676 /* XMPPAppUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMPPAppUtility.swift; sourceTree = "<group>"; };
 		75B4FC8B22CE319B004E0676 /* XMPPConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMPPConstant.swift; sourceTree = "<group>"; };
+		75B781A722D74C7800EE705A /* MediaManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaManager.h; sourceTree = "<group>"; };
+		75B781A822D74C7800EE705A /* MediaManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediaManager.m; sourceTree = "<group>"; };
 		75B7966F22A8EF5600D0A0F5 /* RNDecryptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNDecryptor.h; sourceTree = "<group>"; };
 		75B7967022A8EF5600D0A0F5 /* RNCryptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNCryptor.m; sourceTree = "<group>"; };
 		75B7967122A8EF5600D0A0F5 /* RNCryptor+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RNCryptor+Private.h"; sourceTree = "<group>"; };
@@ -73,8 +78,6 @@
 		75B7967622A8EF5600D0A0F5 /* RNDecryptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNDecryptor.m; sourceTree = "<group>"; };
 		75B7967722A8EF5600D0A0F5 /* RNEncryptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNEncryptor.m; sourceTree = "<group>"; };
 		75B7967822A8EF5600D0A0F5 /* RNCryptorEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNCryptorEngine.m; sourceTree = "<group>"; };
-		75B8E13D22D5B0B70075D047 /* MediaManagerObjC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MediaManagerObjC.h; sourceTree = "<group>"; };
-		75B8E13E22D5B0B70075D047 /* MediaManagerObjC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MediaManagerObjC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +146,8 @@
 		7517C48122A003E400B06221 /* XMPP */ = {
 			isa = PBXGroup;
 			children = (
+				75B781A722D74C7800EE705A /* MediaManager.h */,
+				75B781A822D74C7800EE705A /* MediaManager.m */,
 				7517C48922A003E400B06221 /* ChatContact.h */,
 				7517C48322A003E400B06221 /* ChatContact.m */,
 				7517C48622A003E400B06221 /* ChatMessageHistory.h */,
@@ -154,8 +159,6 @@
 				7517C48A22A003E400B06221 /* XMPPConnectionManager.h */,
 				7517C48522A003E400B06221 /* XMPPConnectionManager.m */,
 				7517C48222A003E400B06221 /* XMPPChatSettingManager.swift */,
-				75B8E13D22D5B0B70075D047 /* MediaManagerObjC.h */,
-				75B8E13E22D5B0B70075D047 /* MediaManagerObjC.m */,
 			);
 			path = XMPP;
 			sourceTree = "<group>";
@@ -196,6 +199,11 @@
 				7517C45A229FE42100B06221 /* XMPPNewSDK.h in Headers */,
 				75B7967B22A8EF5700D0A0F5 /* RNCryptor+Private.h in Headers */,
 				75B7967C22A8EF5700D0A0F5 /* RNCryptor-Prefix.pch in Headers */,
+				75B781AD22D74F6E00EE705A /* XMPPAppUtility.swift in Headers */,
+				75B781AE22D74F6E00EE705A /* XMPPConstant.swift in Headers */,
+				75B781A922D74C7800EE705A /* MediaManager.h in Headers */,
+				75B781AB22D74F6E00EE705A /* ChatUtility.swift in Headers */,
+				75B781AC22D74F6E00EE705A /* XMPPChatSettingManager.swift in Headers */,
 				7517C49622A003E500B06221 /* ChatMessages.h in Headers */,
 				7517C49522A003E500B06221 /* XMPPConnectionManager.h in Headers */,
 				7517C48F22A003E500B06221 /* XMPPUserManager.h in Headers */,
@@ -204,7 +212,6 @@
 				7517C49422A003E500B06221 /* ChatContact.h in Headers */,
 				75B7967D22A8EF5700D0A0F5 /* RNCryptorEngine.h in Headers */,
 				7517C49122A003E500B06221 /* ChatMessageHistory.h in Headers */,
-				75B8E13F22D5B0B70075D047 /* MediaManagerObjC.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,12 +309,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				75B7815322D719B000EE705A /* MediaManagerObjC.h in Sources */,
 				75B3518122D4C63C00E9D05B /* XMPPNewSDK.xcdatamodeld in Sources */,
 				75B3517D22D4C36000E9D05B /* ChatUtility.swift in Sources */,
 				75B4FC8C22CE319B004E0676 /* XMPPConstant.swift in Sources */,
-				75B8E14022D5B0B70075D047 /* MediaManagerObjC.m in Sources */,
 				75B7968222A8EF5700D0A0F5 /* RNCryptorEngine.m in Sources */,
+				75B781AA22D74C7800EE705A /* MediaManager.m in Sources */,
 				75B4FC8922CDE214004E0676 /* XMPPAppUtility.swift in Sources */,
 				7517C461229FE43800B06221 /* Source.swift in Sources */,
 				75B7967A22A8EF5700D0A0F5 /* RNCryptor.m in Sources */,
@@ -451,6 +457,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 529197691FFD146519B83300 /* Pods-XMPPNewSDK.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -480,6 +487,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 44D0768A594C3DFDF3833CBC /* Pods-XMPPNewSDK.release.xcconfig */;
 			buildSettings = {
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;

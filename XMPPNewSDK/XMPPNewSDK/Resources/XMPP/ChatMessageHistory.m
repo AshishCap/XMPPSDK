@@ -7,6 +7,7 @@
 //
 
 #import "ChatMessageHistory.h"
+#import "ChatContact.h"
 
 @implementation ChatMessageHistory
 

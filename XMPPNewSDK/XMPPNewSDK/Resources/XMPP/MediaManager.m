@@ -1,29 +1,25 @@
 //
-//  MediaManagerObjC.m
-//  XMPPNewSDK
+//  MediaManager.m
+//  CustomXMPPSDK
 //
-//  Created by ashish on 7/10/19.
+//  Created by ashish on 7/11/19.
 //  Copyright © 2019 Capanicus. All rights reserved.
 //
 
-#import "MediaManagerObjC.h"
+#import "MediaManager.h"
+#import <XMPPFramework/XMPPFramework.h>
 #import "XMPPUserManager.h"
-#import <CoreData/CoreData.h>
 
-static MediaManagerObjC* manager = nil;
+@implementation MediaManager
 
-@implementation MediaManagerObjC
-
-+ (MediaManagerObjC*) sharedManager
++ (MediaManager*) sharedManager
 {
-    @synchronized(manager)
-    {
-        if (manager==nil)
-        {
-            manager = [[MediaManagerObjC alloc] init];
-        }
-    }
-    return manager;
+    static MediaManager *sharedInstance = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        sharedInstance = [[MediaManager alloc] init];
+    });
+    return sharedInstance;
 }
 
 
@@ -173,5 +169,6 @@ static MediaManagerObjC* manager = nil;
         }
     }
 }
+
 
 @end
