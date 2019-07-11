@@ -6,6 +6,6 @@ target 'XMPPNewSDK' do
   use_frameworks!
 
   # Pods for XMPPNewSDK
-  pod 'XMPPFramework'
+  pod 'XMPPFramework', :git => 'https://github.com/AshishCap/XMPPFramework.git'
 
 end

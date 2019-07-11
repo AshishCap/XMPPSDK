@@ -12,10 +12,10 @@ PODS:
     - CocoaLumberjack
     - KissXML (~> 5.2)
     - libidn (~> 1.35)
-  - XMPPNewSDK (1.0.1):
-    - XMPPFramework (~> 4.0.0)
+  - XMPPNewSDK (1.0.1)
 
 DEPENDENCIES:
+  - XMPPFramework (from `https://github.com/AshishCap/XMPPFramework.git`)
   - XMPPNewSDK (from `../XMPPNewSDK/`)
 
 SPEC REPOS:
@@ -24,11 +24,17 @@ SPEC REPOS:
     - CocoaLumberjack
     - KissXML
     - libidn
-    - XMPPFramework
 
 EXTERNAL SOURCES:
+  XMPPFramework:
+    :git: https://github.com/AshishCap/XMPPFramework.git
   XMPPNewSDK:
     :path: "../XMPPNewSDK/"
+
+CHECKOUT OPTIONS:
+  XMPPFramework:
+    :commit: 441381dbcb10e79610e9e8ce40e4e37734d864b8
+    :git: https://github.com/AshishCap/XMPPFramework.git
 
 SPEC CHECKSUMS:
   CocoaAsyncSocket: eafaa68a7e0ec99ead0a7b35015e0bf25d2c8987
@@ -36,8 +42,8 @@ SPEC CHECKSUMS:
   KissXML: 09f88ff8161fd058d67b70740b8b516687b52823
   libidn: e4576a956b797c584c77aaedfc6e3dd639b61bdc
   XMPPFramework: 5d31ff9f73dce031b24bc49bcf88093627a3a86e
-  XMPPNewSDK: ca34fa6e3432c59dc5080591ce03c60ccc51f554
+  XMPPNewSDK: d3da7578b55dc2d11488c43a8f95ff70385058ba
 
-PODFILE CHECKSUM: 5bc872d261fee81261402937796c75fdecf334c6
+PODFILE CHECKSUM: f801bd8c13e96131f6e4ca3f7af855afb860a03a
 
-COCOAPODS: 1.7.0
+COCOAPODS: 1.7.2

@@ -18,6 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         print(Service.FirstMethod())
+        Service.LoginAndAuthenticateWith(username: "917015746828@chat.goidd.com", password: "yu25r7z9")
         return true
     }
 

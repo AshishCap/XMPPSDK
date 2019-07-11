@@ -10,6 +10,16 @@
 #endif
 #endif
 
+#import "RNCryptor+Private.h"
+#import "RNCryptor.h"
+#import "RNCryptorEngine.h"
+#import "RNDecryptor.h"
+#import "RNEncryptor.h"
+#import "ChatContact.h"
+#import "ChatMessageHistory.h"
+#import "ChatMessages.h"
+#import "XMPPConnectionManager.h"
+#import "XMPPUserManager.h"
 #import "XMPPNewSDK.h"
 
 FOUNDATION_EXPORT double XMPPNewSDKVersionNumber;

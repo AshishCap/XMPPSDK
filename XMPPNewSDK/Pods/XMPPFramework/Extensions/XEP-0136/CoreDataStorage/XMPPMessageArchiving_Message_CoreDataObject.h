@@ -30,7 +30,6 @@
 @property (nonatomic, strong) NSDate * timestamp;
 
 @property (nonatomic, strong) NSString * streamBareJidStr;
-
 @property (nonatomic, strong) NSString * messageId;
 @property (nonatomic, strong) NSString * messageStatus;
 @property (nonatomic, strong) NSString * groupSenderJidStr;

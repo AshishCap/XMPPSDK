@@ -132,6 +132,6 @@ Pod::Spec.new do |spec|
   # spec.requires_arc = true
 
   # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-  spec.dependency "XMPPFramework", "~> 4.0.0"
+  #spec.dependency "XMPPFramework", :git => 'https://github.com/AshishCap/XMPPFramework.git'
 
 end

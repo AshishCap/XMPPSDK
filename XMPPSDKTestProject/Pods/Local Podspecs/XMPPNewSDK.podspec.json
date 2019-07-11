@@ -17,10 +17,5 @@
   },
   "source_files": "XMPPNewSDK/**/*.{h,m,swift}",
   "swift_versions": "4.2",
-  "dependencies": {
-    "XMPPFramework": [
-      "~> 4.0.0"
-    ]
-  },
   "swift_version": "4.2"
 }

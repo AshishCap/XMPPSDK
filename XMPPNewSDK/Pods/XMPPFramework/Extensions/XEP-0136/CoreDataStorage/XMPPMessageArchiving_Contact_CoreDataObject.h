@@ -13,7 +13,6 @@
 @property (nonatomic, strong) NSNumber * mostRecentMessageOutgoing;
 
 @property (nonatomic, strong) NSString * streamBareJidStr;
-
 @property (nonatomic, strong) NSString * groupName;
 @property (nonatomic, strong) NSString * unreadMessageCount;
 

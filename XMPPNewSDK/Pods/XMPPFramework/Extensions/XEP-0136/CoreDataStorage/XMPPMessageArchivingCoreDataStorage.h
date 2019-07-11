@@ -5,6 +5,8 @@
 #import "XMPPMessageArchiving_Message_CoreDataObject.h"
 #import "XMPPMessageArchiving_Contact_CoreDataObject.h"
 
+//Ashish
+
 
 @interface XMPPMessageArchivingCoreDataStorage : XMPPCoreDataStorage <XMPPMessageArchivingStorage>
 {
@@ -44,24 +46,25 @@
 - (NSEntityDescription *)messageEntity:(NSManagedObjectContext *)moc;
 - (NSEntityDescription *)contactEntity:(NSManagedObjectContext *)moc;
 
-- (XMPPMessageArchiving_Message_CoreDataObject *)composingMessageWithJid:(XMPPJID *)messageJid
-                                                               streamJid:(XMPPJID *)streamJid
-                                                                outgoing:(BOOL)isOutgoing
-                                                    managedObjectContext:(NSManagedObjectContext *)moc;
-
 - (XMPPMessageArchiving_Contact_CoreDataObject *)contactForMessage:(XMPPMessageArchiving_Message_CoreDataObject *)msg;
-
-- (void)willInsertMessage:(XMPPMessageArchiving_Message_CoreDataObject *)message;
-- (void)didUpdateMessage:(XMPPMessageArchiving_Message_CoreDataObject *)message;
-- (void)willDeleteMessage:(XMPPMessageArchiving_Message_CoreDataObject *)message;
 
 - (XMPPMessageArchiving_Contact_CoreDataObject *)contactWithJid:(XMPPJID *)contactJid
                                                       streamJid:(XMPPJID *)streamJid
                                            managedObjectContext:(NSManagedObjectContext *)moc;
 
-- (XMPPMessageArchiving_Contact_CoreDataObject *)contactWithBareJidStr:(NSString *)contactBareJidStr
-                                                      streamBareJidStr:(NSString *)streamBareJidStr
-                                                  managedObjectContext:(NSManagedObjectContext *)moc;
+- (XMPPMessageArchiving_Contact_CoreDataObject *)contactWithBareJidStr:(NSString *)contactBareJidStr streamBareJidStr:(NSString *)streamBareJidStr managedObjectContext:(NSManagedObjectContext *)moc;
+
+- (XMPPMessageArchiving_Message_CoreDataObject *)composingMessageWithJid:(XMPPJID *)messageJid
+                                                               streamJid:(XMPPJID *)streamJid
+                                                                outgoing:(BOOL)isOutgoing
+                                                    managedObjectContext:(NSManagedObjectContext *)moc;
+
+- (void)willInsertMessage:(XMPPMessageArchiving_Message_CoreDataObject *)message;
+- (void)didUpdateMessage:(XMPPMessageArchiving_Message_CoreDataObject *)message;
+- (void)willDeleteMessage:(XMPPMessageArchiving_Message_CoreDataObject *)message;
+
+- (void)willInsertContact:(XMPPMessageArchiving_Contact_CoreDataObject *)contact;
+- (void)didUpdateContact:(XMPPMessageArchiving_Contact_CoreDataObject *)contact;
 
 - (void)UpdateRecentMessageOfContactWithBareJidStr:(NSString *)contactBareJidStr managedObjectContext:(NSManagedObjectContext *)moc;
 

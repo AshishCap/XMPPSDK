@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14490.99" systemVersion="18D42" minimumToolsVersion="Xcode 7.3" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
+    <entity name="MediaData" representedClassName="MediaData" syncable="YES">
+        <attribute name="base64String" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="mediaType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="mediaUrl" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="messageId" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <entity name="XMPPMessageArchiving_Contact_CoreDataObject" representedClassName="XMPPMessageArchiving_Contact_CoreDataObject" syncable="YES">
         <attribute name="bareJid" optional="YES" transient="YES" syncable="YES"/>
         <attribute name="bareJidStr" attributeType="String" indexed="YES" syncable="YES"/>
@@ -28,5 +34,6 @@
     <elements>
         <element name="XMPPMessageArchiving_Contact_CoreDataObject" positionX="160" positionY="192" width="128" height="165"/>
         <element name="XMPPMessageArchiving_Message_CoreDataObject" positionX="160" positionY="192" width="128" height="240"/>
+        <element name="MediaData" positionX="162" positionY="288" width="128" height="105"/>
     </elements>
 </model>
