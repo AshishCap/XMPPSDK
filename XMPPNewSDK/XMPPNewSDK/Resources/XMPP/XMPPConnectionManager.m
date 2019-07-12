@@ -594,7 +594,7 @@ static XMPPConnectionManager* manager = nil;
         if ([message body])
         {
             NSString *messageBody = [[message elementForName:@"body"] stringValue];
-            messageBody = [[XMPPUserManager sharedManager] decryptedString:messageBody];
+            //messageBody = [[XMPPUserManager sharedManager] decryptedString:messageBody];
             NSString *typeString = [[message attributeForName:@"type"] stringValue];
             if ([messageBody length] > 0 && ![messageBody isEqualToString:@"##Message Deleted##"])
             {
@@ -646,7 +646,7 @@ static XMPPConnectionManager* manager = nil;
                 {
                     NSString *mediaUrl = [[imageElement elementForName:@"url"] stringValue];
                     mediaUrl = [mediaUrl stringByReplacingOccurrencesOfString:@"\n" withString:@""];
-                    mediaUrl = [[XMPPUserManager sharedManager] decryptedString:mediaUrl];
+                    //mediaUrl = [[XMPPUserManager sharedManager] decryptedString:mediaUrl];
                     if ([mediaUrl length] > 0)
                     {
                         NSString *thumbnailData = @"";
@@ -735,11 +735,11 @@ static XMPPConnectionManager* manager = nil;
     NSXMLElement *message = [NSXMLElement elementWithName:@"message"];
     [message addAttributeWithName:@"to" stringValue: toAddress];
     
-//    if([[AppUtility sharedInstance] isGroupMessageJidWithJid:toAddress]) {
-//        [message addAttributeWithName:@"type" stringValue:@"groupchat"];
-//    } else {
+    if([self IsGroupJid:toAddress]) {
+        [message addAttributeWithName:@"type" stringValue:@"groupchat"];
+    } else {
         [message addAttributeWithName:@"type" stringValue:@"chat"];
-//    }
+    }
     
     NSXMLElement *composing = [NSXMLElement elementWithName:@"composing"];
     [composing addAttributeWithName:@"xmlns" stringValue:@"http://jabber.org/protocol/chatstates"];
@@ -782,11 +782,31 @@ static XMPPConnectionManager* manager = nil;
     [message addAttributeWithName:@"id" stringValue:messageID];
     [message addAttributeWithName:@"to" stringValue:toAddress];
     
-//    if([[AppUtility sharedInstance] isGroupMessageJidWithJid:toAddress]) {
-//        [message addAttributeWithName:@"type" stringValue:@"groupchat"];
-//    } else {
+    if([self IsGroupJid:toAddress]) {
+        [message addAttributeWithName:@"type" stringValue:@"groupchat"];
+    } else {
         [message addAttributeWithName:@"type" stringValue:@"chat"];
-//    }
+    }
+    
+    [message addChild:body];
+    return message;
+}
+
+- (XMPPMessage *)getXmppMessage:(NSString*)toAddress withContents:(NSString*)content messageid:(NSString*)messageID messageType:(NSString *)messageType
+{
+    XMPPMessage *body = [XMPPMessage elementWithName:@"body"];
+    [body setStringValue:content];
+    
+    XMPPMessage *message = [XMPPMessage elementWithName:@"message"];
+    [message addAttributeWithName:@"id" stringValue:messageID];
+    [message addAttributeWithName:@"to" stringValue:toAddress];
+    [message addAttributeWithName:@"messageType" stringValue:messageType];
+    
+    if([self IsGroupJid:toAddress]) {
+        [message addAttributeWithName:@"type" stringValue:@"groupchat"];
+    } else {
+        [message addAttributeWithName:@"type" stringValue:@"chat"];
+    }
     
     [message addChild:body];
     return message;
@@ -809,11 +829,11 @@ static XMPPConnectionManager* manager = nil;
     XMPPMessage *languageElement = [XMPPMessage elementWithName:@"language"];
     [languageElement setStringValue:language];
     
-//    if([[AppUtility sharedInstance] isGroupMessageJidWithJid:toAddress]) {
-//        [message addAttributeWithName:@"type" stringValue:@"groupchat"];
-//    } else {
+    if([self IsGroupJid:toAddress]) {
+        [message addAttributeWithName:@"type" stringValue:@"groupchat"];
+    } else {
         [message addAttributeWithName:@"type" stringValue:@"chat"];
-//    }
+    }
     
     [translatedMessage addChild:languageElement];
     [translatedMessage addChild:translatedTextElement];
@@ -831,12 +851,12 @@ static XMPPConnectionManager* manager = nil;
     [message addAttributeWithName:@"id" stringValue:messageID];
     [message addAttributeWithName:@"to" stringValue:toAddress];
     
-//    if([[AppUtility sharedInstance] isGroupMessageJidWithJid:toAddress]) {
+//    if([self IsGroupJid:toAddress]) {
 //        [message addAttributeWithName:@"type" stringValue:@"card"];
 //    } else {
         [message addAttributeWithName:@"type" stringValue:@"card"];
 //    }
-    
+
     [message addChild:body];
     return message;
 }
@@ -908,11 +928,11 @@ static XMPPConnectionManager* manager = nil;
         [message addAttributeWithName:@"id" stringValue:messageID];
         [message addAttributeWithName:@"to" stringValue:toAddress];
         
-//        if([[AppUtility sharedInstance] isGroupMessageJidWithJid:toAddress]) {
-//            [message addAttributeWithName:@"type" stringValue:@"groupchat"];
-//        } else {
+        if([self IsGroupJid:toAddress]) {
+            [message addAttributeWithName:@"type" stringValue:@"groupchat"];
+        } else {
             [message addAttributeWithName:@"type" stringValue:@"chat"];
-//        }
+        }
         
         [message addChild:image];
         [message addChild:body];
@@ -920,6 +940,24 @@ static XMPPConnectionManager* manager = nil;
         return message;
     }
     return nil;
+}
+
+///*---------------- Group checked --------------*/
+//func isGroupMessageJid(jid: String) -> Bool
+//{
+//    if jid.range(of:"@muclight.chat.goidd.com") != nil{
+//        return true
+//    }
+//    return false
+//}
+
+-(BOOL)IsGroupJid:(NSString*)jid
+{
+    if ([jid rangeOfString:@"@muclight.chat.goidd.com"].location == NSNotFound)
+    {
+        return NO;
+    }
+    return YES;
 }
 
 @end

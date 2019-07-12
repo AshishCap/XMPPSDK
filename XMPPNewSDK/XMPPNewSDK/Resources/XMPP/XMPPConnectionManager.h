@@ -86,6 +86,7 @@
 - (void)sendXmppTypingMessage:(NSString*)toAddress;
 - (XMPPMessage*)getXmppMessageForGroupCreationAndUpdation:(NSString*)toAddress messageBody:(NSString*)messageBody roomName:(NSString*)roomName;
 - (XMPPMessage *)getXmppMessage:(NSString*)toAddress withContents:(NSString*)content messageid:(NSString*)messageID;
+- (XMPPMessage *)getXmppMessage:(NSString*)toAddress withContents:(NSString*)content messageid:(NSString*)messageID messageType:(NSString*)messageType;
 - (XMPPMessage *)getXmppTranslatedMessage:(NSString*)toAddress withContents:(NSString*)content translatedString:(NSString*)translatedText language:(NSString*)language messageid:(NSString*)messageID;
 - (XMPPMessage *)getXmppMessageForMedia:(NSString*)toAddress message:(NSString*)mediaUrl messageid:(NSString*)messageID andImageData:(NSString*)data type:(NSString*)mediaType;
 - (XMPPMessage *)getXmppCardMessage:(NSString*)toAddress withContents:(NSString*)content messageid:(NSString*)messageID;

@@ -7,6 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <XMPPFramework/XMPPFramework.h>
+#import "XMPPUserManager.h"
 
 //NS_ASSUME_NONNULL_BEGIN
 

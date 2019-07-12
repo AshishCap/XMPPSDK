@@ -25,7 +25,7 @@
 		75B3518122D4C63C00E9D05B /* XMPPNewSDK.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 75B3517F22D4C63C00E9D05B /* XMPPNewSDK.xcdatamodeld */; };
 		75B4FC8922CDE214004E0676 /* XMPPAppUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B4FC8822CDE214004E0676 /* XMPPAppUtility.swift */; };
 		75B4FC8C22CE319B004E0676 /* XMPPConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B4FC8B22CE319B004E0676 /* XMPPConstant.swift */; };
-		75B781A922D74C7800EE705A /* MediaManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 75B781A722D74C7800EE705A /* MediaManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		75B781A922D74C7800EE705A /* MediaManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 75B781A722D74C7800EE705A /* MediaManager.h */; };
 		75B781AA22D74C7800EE705A /* MediaManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 75B781A822D74C7800EE705A /* MediaManager.m */; };
 		75B781AB22D74F6E00EE705A /* ChatUtility.swift in Headers */ = {isa = PBXBuildFile; fileRef = 75B3517B22D4C35F00E9D05B /* ChatUtility.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 		75B781AC22D74F6E00EE705A /* XMPPChatSettingManager.swift in Headers */ = {isa = PBXBuildFile; fileRef = 7517C48222A003E400B06221 /* XMPPChatSettingManager.swift */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -201,13 +201,13 @@
 				75B7967C22A8EF5700D0A0F5 /* RNCryptor-Prefix.pch in Headers */,
 				75B781AD22D74F6E00EE705A /* XMPPAppUtility.swift in Headers */,
 				75B781AE22D74F6E00EE705A /* XMPPConstant.swift in Headers */,
-				75B781A922D74C7800EE705A /* MediaManager.h in Headers */,
+				7517C49522A003E500B06221 /* XMPPConnectionManager.h in Headers */,
 				75B781AB22D74F6E00EE705A /* ChatUtility.swift in Headers */,
 				75B781AC22D74F6E00EE705A /* XMPPChatSettingManager.swift in Headers */,
 				7517C49622A003E500B06221 /* ChatMessages.h in Headers */,
-				7517C49522A003E500B06221 /* XMPPConnectionManager.h in Headers */,
 				7517C48F22A003E500B06221 /* XMPPUserManager.h in Headers */,
 				75B7967E22A8EF5700D0A0F5 /* RNEncryptor.h in Headers */,
+				75B781A922D74C7800EE705A /* MediaManager.h in Headers */,
 				75B7967F22A8EF5700D0A0F5 /* RNCryptor.h in Headers */,
 				7517C49422A003E500B06221 /* ChatContact.h in Headers */,
 				75B7967D22A8EF5700D0A0F5 /* RNCryptorEngine.h in Headers */,

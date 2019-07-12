@@ -72,7 +72,7 @@
     // Message should either have a body, or be a composing notification
     
     NSString *messageBody = [[message elementForName:@"body"] stringValue];
-    messageBody = [[XMPPUserManager sharedManager] decryptedString:messageBody];
+    //messageBody = [[XMPPUserManager sharedManager] decryptedString:messageBody];
     BOOL isComposing = NO;
     BOOL shouldDeleteComposingMessage = NO;
     
